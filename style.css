@@ -1,86 +1,59 @@
-/*******BASE RESET*******/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-}
-
-li {
-  list-style-type: none;
-}
-
-/*******BOX-SIZING AND FONT SIZING********/
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: 'Patrick Hand', Verdana, cursive;
-  font-size: 16px;
-}
-
-/*******GENERAL********/
-.container {
-  height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 15% 70% 15%;
-      grid-template-rows: 15% 70% 15%;
-}
-
 img {
   height: 3rem;
   width: 3rem;
 }
 
-.navbar {
-  width: 95%;
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.navbar .menu {
+.menu-item {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.popup {
+  display: none;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + label ~ .popup {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 6rem;
+  width: 25rem;
+  height: 18rem;
+  overflow-y: scroll;
+}
+
+input[type=checkbox]:checked + label ~ .popup .popup-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 50%;
-  float: right;
-}
-
-.navbar .test {
-  overflow: scroll;
-}
-
-.navbar .more-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 24.5rem;
-  width: 16rem;
+  list-style-type: none;
 }
 
-.navbar .more-menu li {
+input[type=checkbox]:checked + label ~ .popup .popup-menu .popup-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,32 +64,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0.5rem;
+  width: 6rem;
+  height: 6rem;
 }
 
-.navbar .more-menu li button {
-  width: 100%;
-}
-
-.navbar .hidden {
-  height: 10rem;
-}
-
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.content h1 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
+input[type=checkbox]:checked + label ~ .popup .popup-menu .popup-item img {
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

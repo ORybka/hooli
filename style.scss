@@ -1,119 +1,56 @@
-/*******BASE RESET*******/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-}
-
-li {
-  list-style-type: none;
-}
-
-/*******BOX-SIZING AND FONT SIZING********/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Patrick Hand', Verdana, cursive;
-  font-size: 16px;
-}
-
-/*******GENERAL********/
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 15% 70% 15%;
-}
-
 img {
   height: 3rem;
   width: 3rem;
 }
 
-.navbar {
-  width: 95%;
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .menu {
+.menu-item {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.popup {
+  display: none;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+
+label { 
+ cursor: pointer;
+}
+
+input[type=checkbox]:checked + label ~ .popup {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 6rem;
+  width: 25rem;
+  height: 18rem;
+  overflow-y: scroll;
+
+  .popup-menu {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    width: 50%;
-    float: right;
-  }
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
 
-  .test {
-    overflow: scroll;
-  }
-
-  // .more-menu {
-  //   display: none;
-  // }
-  
-  // &:hover {
-    .more-menu {
+    .popup-item {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      height: 24.5rem;
-      width: 16rem;
+      flex-direction: column;
+      align-items: center;
+      width: 6rem;
+      height: 6rem;
 
-      li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0.5rem;
-
-        button {
-          width: 100%;
-        }
+      img {
+        padding-bottom: 1rem;
       }
     }
-
-    .hidden {
-      height: 10rem;
-    }
-  // }
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h1 {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
