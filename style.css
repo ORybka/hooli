@@ -70,6 +70,11 @@ body {
   margin: 0 1rem;
 }
 
+.navbar ul .menu-item .menu-item-link:hover, .navbar ul .menu-item .menu-item-link:focus {
+  background-color: #a3defe;
+  border-radius: 0.5rem;
+}
+
 .popup {
   display: none;
 }
@@ -102,7 +107,7 @@ input[type=checkbox]:checked + label ~ .popup {
   padding-top: 1rem;
   overflow-y: scroll;
   overflow-x: hidden;
-  z-index: 5;
+  background-color: white;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 7px 30px rgba(0, 0, 0, 0.25), 0 7px 5px rgba(0, 0, 0, 0.22);
           box-shadow: 0 7px 30px rgba(0, 0, 0, 0.25), 0 7px 5px rgba(0, 0, 0, 0.22);
@@ -152,16 +157,19 @@ input[type=checkbox]:checked + label ~ .popup .popup-menu .popup-item {
           align-items: center;
   width: 6rem;
   height: 6rem;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
+  padding: 0.5rem 0;
   font-size: 1.2rem;
 }
 
 input[type=checkbox]:checked + label ~ .popup .popup-menu .popup-item:hover {
-  background-color: green;
+  background-color: #8ee2cf;
+  border-radius: 0.5rem;
 }
 
 input[type=checkbox]:checked + label ~ .popup .popup-menu .popup-item:focus {
-  background-color: yellow;
+  background-color: #f4ea64;
+  border-radius: 0.5rem;
 }
 
 input[type=checkbox]:checked + label ~ .popup .popup-menu .popup-item img {

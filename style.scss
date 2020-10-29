@@ -55,6 +55,11 @@ body {
       font-weight: bold;
       align-items: center;
       margin: 0 1rem;
+
+      .menu-item-link:hover, .menu-item-link:focus {
+        background-color: rgb(163, 222, 254);
+        border-radius: 0.5rem;
+      }
     }
   }
 }
@@ -91,7 +96,7 @@ input[type=checkbox]:checked + label ~ .popup {
   padding-top: 1rem;
   overflow-y: scroll;
   overflow-x: hidden;
-  z-index: 5;
+  background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.25), 0 7px 5px rgba(0, 0, 0, 0.22);
   z-index: 5;
@@ -122,15 +127,18 @@ input[type=checkbox]:checked + label ~ .popup {
       align-items: center;
       width: 6rem;
       height: 6rem;
-      margin: 0.5rem 0;
+      margin: 0.3rem 0;
+      padding: 0.5rem 0;
       font-size: 1.2rem;
 
       &:hover {
-        background-color: green;
+        background-color: rgb(142, 226, 207);
+        border-radius: 0.5rem;
       }
 
       &:focus {
-        background-color: yellow;
+        background-color: rgb(244, 234, 100);
+        border-radius: 0.5rem;
       }
 
       img {
