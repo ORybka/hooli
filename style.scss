@@ -1,15 +1,53 @@
+/*******BASE RESET*******/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
 img {
   height: 3rem;
   width: 3rem;
 }
 
+/*******GENERAL*******/
+body {
+  font-family: 'Patrick Hand', Verdana, cursive;
+  font-size: 16px;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 15% 80% 5%;
+}
+
+/*******HEADER*******/
 ul {
   display: flex;
   justify-content: flex-end;
 }
 
 .menu-item {
-  list-style-type: none;
   margin: 0 1rem;
 }
 
@@ -34,12 +72,12 @@ input[type=checkbox]:checked + label ~ .popup {
   width: 25rem;
   height: 18rem;
   overflow-y: scroll;
+  z-index: 5;
 
   .popup-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    list-style-type: none;
 
     .popup-item {
       display: flex;
@@ -49,8 +87,26 @@ input[type=checkbox]:checked + label ~ .popup {
       height: 6rem;
 
       img {
-        padding-bottom: 1rem;
+        height: 4rem;
+        width: 4rem;
+        padding-bottom: 0.5rem;
       }
     }
   }
 }
+
+/*******MAIN********/
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+
+  h1 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+/*******FOOTER********/
