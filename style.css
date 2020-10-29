@@ -1,0 +1,122 @@
+/*******BASE RESET*******/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*******BOX-SIZING AND FONT SIZING********/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Patrick Hand', Verdana, cursive;
+  font-size: 16px;
+}
+
+/*******GENERAL********/
+.container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15% 70% 15%;
+      grid-template-rows: 15% 70% 15%;
+}
+
+img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.navbar {
+  width: 95%;
+}
+
+.navbar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  float: right;
+}
+
+.navbar .test {
+  overflow: scroll;
+}
+
+.navbar .more-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 24.5rem;
+  width: 16rem;
+}
+
+.navbar .more-menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem;
+}
+
+.navbar .more-menu li button {
+  width: 100%;
+}
+
+.navbar .hidden {
+  height: 10rem;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+/*# sourceMappingURL=style.css.map */
