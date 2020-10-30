@@ -76,8 +76,9 @@ html {
   margin: 0 1rem;
 }
 
-.navbar ul .menu-item .menu-item-link:hover, .navbar ul .menu-item .menu-item-link:focus {
-  background-color: #a3defe;
+.navbar ul .menu-item .menu-item-link:hover, .navbar ul .menu-item .menu-item-link:focus,
+.navbar ul .menu-item .menu-img:hover, .navbar ul .menu-item .menu-img:focus {
+  background-color: #8ee2cf;
   border-radius: 0.5rem;
 }
 
@@ -163,21 +164,21 @@ input[type=checkbox]:checked + label ~ .popup .popup-menu {
           align-items: center;
 }
 
-.more-popup {
+.more-popup-container .more-popup {
   display: none;
 }
 
-input[type=checkbox] {
-  position: absolute;
-  display: none;
-}
-
-.more-btn {
+.more-popup-container .more-btn {
   display: block;
   padding: 0 5rem;
   margin: 0.5rem 0;
   background-color: #b8b8c0;
   font-size: 1.2rem;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  display: none;
 }
 
 input[type=checkbox]:checked + label ~ .more-popup {
@@ -232,6 +233,13 @@ input[type=checkbox]:checked + label ~ .more-popup .more-popup-hidden {
   height: 4rem;
   width: 4rem;
   padding-bottom: 0.5rem;
+}
+
+.popup-item-span {
+  display: inline-block;
+  margin: 1rem auto 0.5rem;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 
 /*******MAIN********/

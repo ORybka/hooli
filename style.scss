@@ -30,6 +30,16 @@ img {
 }
 
 /*******GENERAL*******/
+$colors: (
+  bg-green:  rgb(142, 226, 207),
+  bg-yellow: rgb(244, 234, 100),
+  border-grey:  rgba(153, 153, 153, 0.2)
+);
+
+@function color($colors-name) {
+  @return map-get($colors, $colors-name);
+}
+
 html {
   font-family: 'Patrick Hand', Verdana, cursive;
   font-size: 16px;
@@ -62,8 +72,9 @@ html {
       align-items: center;
       margin: 0 1rem;
 
-      .menu-item-link:hover, .menu-item-link:focus {
-        background-color: rgb(163, 222, 254);
+      .menu-item-link:hover, .menu-item-link:focus,
+      .menu-img:hover, .menu-img:focus {
+        background-color: color(bg-green);
         border-radius: 0.5rem;
       }
     }
@@ -116,8 +127,8 @@ input[type=checkbox]:checked + label ~ .popup {
     height: 1rem;
     background-color: white;
     transform: rotate(45deg);
-    border-top: 2px solid rgba(153, 153, 153, 0.2);
-    border-left: 2px solid rgba(153, 153, 153, 0.2);
+    border-top: 2px solid color(border-grey);
+    border-left: 2px solid color(border-grey);
     z-index: -1;
   }
 
@@ -133,23 +144,23 @@ input[type=checkbox]:checked + label ~ .popup {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.more-popup {
-  display: none;
+  .more-popup {
+    display: none;
+  }
+
+  .more-btn {
+    display: block;
+    padding: 0 5rem;
+    margin: 0.5rem 0;
+    background-color: rgb(184, 184, 192);
+    font-size: 1.2rem;
+  }
 }
 
 input[type=checkbox] {
   position: absolute;
   display: none;
-}
-
-.more-btn {
-  display: block;
-  padding: 0 5rem;
-  margin: 0.5rem 0;
-  background-color: rgb(184, 184, 192);
-  font-size: 1.2rem;
 }
 
 input[type=checkbox]:checked + label ~ .more-popup {
@@ -175,12 +186,12 @@ input[type=checkbox]:checked + label ~ .more-popup {
   font-size: 1.2rem;
 
   &:hover {
-    background-color: rgb(142, 226, 207);
+    background-color: color(bg-green);
     border-radius: 0.5rem;
   }
 
   &:focus {
-    background-color: rgb(244, 234, 100);
+    background-color: color(bg-yellow);
     border-radius: 0.5rem;
   }
 
@@ -189,6 +200,13 @@ input[type=checkbox]:checked + label ~ .more-popup {
     width: 4rem;
     padding-bottom: 0.5rem;
   }
+}
+
+.popup-item-span {
+  display: inline-block;
+  margin: 1rem auto 0.5rem;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 
 /*******MAIN********/
@@ -215,3 +233,4 @@ input[type=checkbox]:checked + label ~ .more-popup {
   float: right;
   margin-right: 1rem;
 }
+
