@@ -30,9 +30,15 @@ img {
 }
 
 /*******GENERAL*******/
-body {
+html {
   font-family: 'Patrick Hand', Verdana, cursive;
   font-size: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 .container {
@@ -161,6 +167,11 @@ input[type=checkbox]:checked + label ~ .popup {
   h1 {
     margin-top: 1rem;
     font-size: 2.5rem;
+  }
+
+  .img-main {
+    height: 20rem; 
+    width: 20rem;
   }
 }
 
