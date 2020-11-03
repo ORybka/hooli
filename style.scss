@@ -66,25 +66,23 @@ html {
 .navbar {
   margin-top: 1rem;
 
-  ul {
+  .menu {
     display: flex;
     justify-content: flex-end;
+  }
 
-    .menu-item {
-      display: flex;
-      font-size: 1.5rem;
-      font-weight: bold;
-      align-items: center;
-      margin: 0 1rem;
+  .menu-item {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+    margin: 0 1rem;
+  }
 
-      .menu-item-link:hover,
-      .menu-item-link:focus,
-      .menu-img:hover,
-      .menu-img:focus {
-        background-color: color(bg-green);
-        border-radius: 0.5rem;
-      }
-    }
+  .menu-item-link:hover,
+  :focus {
+    background-color: color(bg-green);
+    border-radius: 0.5rem;
   }
 }
 
@@ -110,7 +108,7 @@ label {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.btn-open[type="checkbox"]:checked + label ~ .popup {
+.btn-open[type="checkbox"]:checked + a ~ .popup {
   display: block;
   position: absolute;
   right: 1.5rem;

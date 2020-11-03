@@ -60,7 +60,7 @@ html {
   margin-top: 1rem;
 }
 
-.navbar ul {
+.navbar .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +69,7 @@ html {
           justify-content: flex-end;
 }
 
-.navbar ul .menu-item {
+.navbar .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,10 +81,8 @@ html {
   margin: 0 1rem;
 }
 
-.navbar ul .menu-item .menu-item-link:hover,
-.navbar ul .menu-item .menu-item-link:focus,
-.navbar ul .menu-item .menu-img:hover,
-.navbar ul .menu-item .menu-img:focus {
+.navbar .menu-item-link:hover,
+.navbar :focus {
   background-color: #8ee2cf;
   border-radius: 0.5rem;
 }
@@ -111,7 +109,7 @@ label {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.btn-open[type="checkbox"]:checked + label ~ .popup {
+.btn-open[type="checkbox"]:checked + a ~ .popup {
   display: block;
   position: absolute;
   right: 1.5rem;
@@ -128,7 +126,7 @@ label {
   z-index: 5;
 }
 
-.btn-open[type="checkbox"]:checked + label ~ .popup::before {
+.btn-open[type="checkbox"]:checked + a ~ .popup::before {
   position: fixed;
   content: "";
   right: 12rem;
@@ -143,7 +141,7 @@ label {
   z-index: -1;
 }
 
-.btn-open[type="checkbox"]:checked + label ~ .popup .popup-menu {
+.btn-open[type="checkbox"]:checked + a ~ .popup .popup-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
