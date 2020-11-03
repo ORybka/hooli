@@ -10,7 +10,12 @@
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -31,9 +36,9 @@ img {
 
 /*******GENERAL*******/
 $colors: (
-  bg-green:  rgb(142, 226, 207),
+  bg-green: rgb(142, 226, 207),
   bg-yellow: rgb(244, 234, 100),
-  border-grey:  rgba(153, 153, 153, 0.2)
+  border-grey: rgba(153, 153, 153, 0.2),
 );
 
 @function color($colors-name) {
@@ -41,7 +46,7 @@ $colors: (
 }
 
 html {
-  font-family: 'Patrick Hand', Verdana, cursive;
+  font-family: "Patrick Hand", Verdana, cursive;
   font-size: 16px;
 }
 
@@ -64,7 +69,7 @@ html {
   ul {
     display: flex;
     justify-content: flex-end;
-  
+
     .menu-item {
       display: flex;
       font-size: 1.5rem;
@@ -72,8 +77,10 @@ html {
       align-items: center;
       margin: 0 1rem;
 
-      .menu-item-link:hover, .menu-item-link:focus,
-      .menu-img:hover, .menu-img:focus {
+      .menu-item-link:hover,
+      .menu-item-link:focus,
+      .menu-img:hover,
+      .menu-img:focus {
         background-color: color(bg-green);
         border-radius: 0.5rem;
       }
@@ -85,13 +92,13 @@ html {
   display: none;
 }
 
-input[type=checkbox] {
+.btn-open[type="checkbox"] {
   position: absolute;
   display: none;
 }
 
-label { 
- cursor: pointer;
+label {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -103,7 +110,7 @@ label {
   background: rgba(0, 0, 0, 0.5);
 }
 
-input[type=checkbox]:checked + label ~ .popup {
+.btn-open[type="checkbox"]:checked + label ~ .popup {
   display: block;
   position: absolute;
   right: 1.5rem;
@@ -118,7 +125,7 @@ input[type=checkbox]:checked + label ~ .popup {
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.25), 0 7px 5px rgba(0, 0, 0, 0.22);
   z-index: 5;
 
-  &::before {    
+  &::before {
     position: fixed;
     content: "";
     right: 12rem;
@@ -159,12 +166,12 @@ input[type=checkbox]:checked + label ~ .popup {
   }
 }
 
-input[type=checkbox] {
+.btn-open[type="checkbox"] {
   position: absolute;
   display: none;
 }
 
-input[type=checkbox]:checked + label ~ .more-popup {
+.btn-open[type="checkbox"]:checked + label ~ .more-popup {
   display: block;
 
   .more-popup-hidden {
@@ -224,7 +231,7 @@ input[type=checkbox]:checked + label ~ .more-popup {
   }
 
   .img-main {
-    height: 20rem; 
+    height: 20rem;
     width: 20rem;
   }
 }
@@ -234,4 +241,3 @@ input[type=checkbox]:checked + label ~ .more-popup {
   float: right;
   margin-right: 1rem;
 }
-

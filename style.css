@@ -11,7 +11,12 @@
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -32,7 +37,7 @@ img {
 
 /*******GENERAL*******/
 html {
-  font-family: 'Patrick Hand', Verdana, cursive;
+  font-family: "Patrick Hand", Verdana, cursive;
   font-size: 16px;
 }
 
@@ -76,8 +81,10 @@ html {
   margin: 0 1rem;
 }
 
-.navbar ul .menu-item .menu-item-link:hover, .navbar ul .menu-item .menu-item-link:focus,
-.navbar ul .menu-item .menu-img:hover, .navbar ul .menu-item .menu-img:focus {
+.navbar ul .menu-item .menu-item-link:hover,
+.navbar ul .menu-item .menu-item-link:focus,
+.navbar ul .menu-item .menu-img:hover,
+.navbar ul .menu-item .menu-img:focus {
   background-color: #8ee2cf;
   border-radius: 0.5rem;
 }
@@ -86,7 +93,7 @@ html {
   display: none;
 }
 
-input[type=checkbox] {
+.btn-open[type="checkbox"] {
   position: absolute;
   display: none;
 }
@@ -104,7 +111,7 @@ label {
   background: rgba(0, 0, 0, 0.5);
 }
 
-input[type=checkbox]:checked + label ~ .popup {
+.btn-open[type="checkbox"]:checked + label ~ .popup {
   display: block;
   position: absolute;
   right: 1.5rem;
@@ -121,7 +128,7 @@ input[type=checkbox]:checked + label ~ .popup {
   z-index: 5;
 }
 
-input[type=checkbox]:checked + label ~ .popup::before {
+.btn-open[type="checkbox"]:checked + label ~ .popup::before {
   position: fixed;
   content: "";
   right: 12rem;
@@ -136,7 +143,7 @@ input[type=checkbox]:checked + label ~ .popup::before {
   z-index: -1;
 }
 
-input[type=checkbox]:checked + label ~ .popup .popup-menu {
+.btn-open[type="checkbox"]:checked + label ~ .popup .popup-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,16 +184,16 @@ input[type=checkbox]:checked + label ~ .popup .popup-menu {
   border-radius: 0.5rem;
 }
 
-input[type=checkbox] {
+.btn-open[type="checkbox"] {
   position: absolute;
   display: none;
 }
 
-input[type=checkbox]:checked + label ~ .more-popup {
+.btn-open[type="checkbox"]:checked + label ~ .more-popup {
   display: block;
 }
 
-input[type=checkbox]:checked + label ~ .more-popup .more-popup-hidden {
+.btn-open[type="checkbox"]:checked + label ~ .more-popup .more-popup-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
