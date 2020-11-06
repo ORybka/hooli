@@ -85,18 +85,14 @@ html {
   border-radius: 0.5rem;
 }
 
-.check__input {
+.check-input {
   position: absolute;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-.check__input .popup {
-  display: none;
-}
-
-.check__box {
+.check-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,37 +106,17 @@ html {
   background-size: contain;
 }
 
-.check__input:focus + .check__box {
+.check-input:focus + .check-box {
   background-color: #8ee2cf;
   outline: 0;
   border-radius: 0.5rem;
 }
 
-.check__input:checked ~ .popup {
-  background-color: red;
-  width: 3rem;
-  height: 3rem;
-}
-
-.popup-extend {
-  position: absolute;
+.visually-hidden {
   display: none;
 }
 
-label {
-  cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  width: 0.3rem;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.popup-extend:checked + label ~ .popup {
+.check-input:checked ~ .popup {
   display: block;
   position: absolute;
   right: 1.5rem;
@@ -157,7 +133,7 @@ label {
   z-index: 5;
 }
 
-.popup-extend:checked + label ~ .popup::before {
+.check-input:checked ~ .popup::before {
   position: fixed;
   content: "";
   right: 12rem;
@@ -172,7 +148,7 @@ label {
   z-index: -1;
 }
 
-.popup-extend:checked + label ~ .popup .popup-menu {
+.check-input:checked ~ .popup .popup-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,6 +161,15 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .more-popup-container {
