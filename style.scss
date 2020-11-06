@@ -75,7 +75,7 @@ html {
     align-items: center;
     margin: 0 1rem;
 
-    &:hover,
+    a:hover,
     :focus {
       background-color: color(bg-green);
       outline: 0;
@@ -84,21 +84,23 @@ html {
   }
 }
 
-.check {
-  .check__input {
-    position: absolute;
-    appearance: none;
-  }
+.check__input {
+  position: absolute;
+  appearance: none;
 
-  .check__box {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 3rem;
-    height: 3rem;
-    background-image: url(./assets/menu.svg);
-    background-size: contain;
+  .popup {
+    display: none;
   }
+}
+
+.check__box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(./assets/menu.svg);
+  background-size: contain;
 }
 
 .check__input:focus + .check__box {
@@ -107,14 +109,10 @@ html {
   border-radius: 0.5rem;
 }
 
-.check__input:focus + .check__box {
-  background-color: color(bg-green);
-  outline: 0;
-  border-radius: 0.5rem;
-}
-
-.popup {
-  display: none;
+.check__input:checked ~ .popup {
+  background-color: red;
+  width: 3rem;
+  height: 3rem;
 }
 
 .popup-extend {
