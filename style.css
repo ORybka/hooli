@@ -78,9 +78,43 @@ html {
   margin: 0 1rem;
 }
 
-.navbar .menu-img:hover,
-.navbar :focus {
+.navbar .menu-item:hover,
+.navbar .menu-item :focus {
   background-color: #8ee2cf;
+  outline: 0;
+  border-radius: 0.5rem;
+}
+
+.check .check__input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.check .check__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(./assets/menu.svg);
+  background-size: contain;
+}
+
+.check__input:focus + .check__box {
+  background-color: #8ee2cf;
+  outline: 0;
+  border-radius: 0.5rem;
+}
+
+.check__input:focus + .check__box {
+  background-color: #8ee2cf;
+  outline: 0;
   border-radius: 0.5rem;
 }
 
@@ -181,11 +215,6 @@ label {
 
 .more-popup-container .more-btn:focus {
   border-radius: 0.5rem;
-}
-
-.popup-extend {
-  position: absolute;
-  display: none;
 }
 
 .popup-extend:checked + a ~ .more-popup {
