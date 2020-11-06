@@ -105,6 +105,35 @@ label {
   background: rgba(0, 0, 0, 0.5);
 }
 
+// .check {
+//   .check__input {
+//     position: absolute;
+//     appearance: none;
+//   }
+
+//   .check__box {
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+//     width: 3rem;
+//     height: 3rem;
+//     background-image: url(./assets/menu.svg);
+//     background-size: contain;
+//   }
+// }
+
+// .check__input:focus + .check__box {
+//   background-color: color(bg-green);
+//   outline: 0;
+//   border-radius: 0.5rem;
+// }
+
+// .check__input:focus + .check__box {
+//   background-color: color(bg-green);
+//   outline: 0;
+//   border-radius: 0.5rem;
+// }
+
 .popup-extend:checked + label ~ .popup {
   display: block;
   position: absolute;
