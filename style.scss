@@ -101,6 +101,7 @@ html {
   background-color: color(bg-green);
   outline: 0;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -174,7 +175,7 @@ html {
 .check-input-more:hover + .check-box-more {
   background-color: color(bg-green);
   outline: 0;
-  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .check-input-more:checked + .check-box-more {
