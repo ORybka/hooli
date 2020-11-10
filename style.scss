@@ -174,16 +174,20 @@ html {
   height: 2rem;
   background-color: color(bg-grey);
   text-transform: uppercase;
+
+  &:hover {
+    background-color: color(bg-green);
+    outline: 0;
+    cursor: pointer;
+  }
 }
 
-.check-input-more:focus + .check-box-more,
-.check-input-more:hover + .check-box-more {
+#check-label-more:focus ~ * .check-box-more {
   background-color: color(bg-green);
   outline: 0;
-  cursor: pointer;
 }
 
-.check-input-more:checked + .check-box-more {
+#check-label-more:checked ~ * .check-box-more {
   position: absolute;
   display: none;
 }

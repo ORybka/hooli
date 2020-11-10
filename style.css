@@ -203,14 +203,18 @@ html {
   text-transform: uppercase;
 }
 
-.check-input-more:focus + .check-box-more,
-.check-input-more:hover + .check-box-more {
+.check-box-more:hover {
   background-color: #8ee2cf;
   outline: 0;
   cursor: pointer;
 }
 
-.check-input-more:checked + .check-box-more {
+#check-label-more:focus ~ * .check-box-more {
+  background-color: #8ee2cf;
+  outline: 0;
+}
+
+#check-label-more:checked ~ * .check-box-more {
   position: absolute;
   display: none;
 }
